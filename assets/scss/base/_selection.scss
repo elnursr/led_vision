@@ -1,0 +1,6 @@
+@use '../abstracts' as v;
+
+::selection {
+    color: v.$color-white;
+    background-color: v.$color-black;
+}
