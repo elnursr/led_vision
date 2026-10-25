@@ -1,0 +1,1 @@
+export const navigationList = document.querySelector('.navigation-list');

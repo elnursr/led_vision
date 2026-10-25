@@ -1,0 +1,22 @@
+@use '../../abstracts' as v;
+
+.brand-logo {
+    &__link {
+        display: block;
+    }
+
+    &__word {
+        display: inline-block;
+        text-transform: uppercase;
+        
+    }
+
+    &__word:first-child {
+        color: v.$color-primary;
+        text-shadow: 3px 0 3px v.$color-primary;
+    }
+
+    &__word:last-child {
+        color: v.$color-white;
+    }
+}

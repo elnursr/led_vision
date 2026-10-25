@@ -1,0 +1,73 @@
+@use '../../abstracts' as v;
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 12;
+    background-color: v.$color-secondary;
+
+    &__wrapper {
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+
+        &__link {
+            position: relative;
+            text-transform: uppercase;
+            padding: 1em;
+            transition: color .3s;
+            color: v.$color-white;
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                width: .1em;
+                height: 0;
+                border-radius: 1em;
+                transition: height .3s, text-shadow .5s;
+            }
+
+            &::after {
+                left: 0;
+                top: 0;
+                background-image: linear-gradient(to bottom, v.$color-primary, rgba(v.$color-secondary, .3));
+            }
+
+            &::before {
+                right: 0;
+                bottom: 0;
+                background-image: linear-gradient(to top, v.$color-primary, rgba(v.$color-secondary, .3));
+            }
+
+            &:hover {
+                color: v.$color-primary;
+                text-shadow: 3px 0 3px v.$color-primary;
+
+                &::after,
+                &::before {
+                    height: 100%;
+                }
+            }
+
+            &--active {
+                color: v.$color-primary;
+                text-shadow: 3px 0 3px v.$color-primary;
+
+                &::after,
+                &:before {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+.brand-logo__link {
+  display: block;
+}
+.brand-logo__word {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.brand-logo__word:first-child {
+  color: #b20d23;
+  text-shadow: 3px 0 3px #b20d23;
+}
+.brand-logo__word:last-child {
+  color: white;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 12;
+  background-color: #17080a;
+}
+.navigation__wrapper {
+  height: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.navigation-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+}
+.navigation-list__link {
+  position: relative;
+  text-transform: uppercase;
+  padding: 1em;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  color: white;
+}
+.navigation-list__link::after, .navigation-list__link::before {
+  content: "";
+  position: absolute;
+  width: 0.1em;
+  height: 0;
+  border-radius: 1em;
+  -webkit-transition: height 0.3s, text-shadow 0.5s;
+  transition: height 0.3s, text-shadow 0.5s;
+}
+.navigation-list__link::after {
+  left: 0;
+  top: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#b20d23), to(rgba(23, 8, 10, 0.3)));
+  background-image: linear-gradient(to bottom, #b20d23, rgba(23, 8, 10, 0.3));
+}
+.navigation-list__link::before {
+  right: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#b20d23), to(rgba(23, 8, 10, 0.3)));
+  background-image: linear-gradient(to top, #b20d23, rgba(23, 8, 10, 0.3));
+}
+.navigation-list__link:hover {
+  color: #b20d23;
+  text-shadow: 3px 0 3px #b20d23;
+}
+.navigation-list__link:hover::after, .navigation-list__link:hover::before {
+  height: 100%;
+}
+.navigation-list__link--active {
+  color: #b20d23;
+  text-shadow: 3px 0 3px #b20d23;
+}
+.navigation-list__link--active::after, .navigation-list__link--active:before {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 81%;
+}
+
+body {
+  background-color: #520b16;
+}
