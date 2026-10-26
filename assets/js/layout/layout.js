@@ -1,8 +1,10 @@
 import { Renderer } from '../renderers/render.js'
-import { navigationList } from '../dom/dom-selectors.js';
-import { NavigationItem } from '../components/layout/NavigationItem.js';
 
-import navigationItems from '../data/navigationItems.js';
+import { serviceItems, navigationItems, socialNetworkItem } from '../data/index.js';
+
+import { ServiceItem, NavigationItem, SocialNetworkItem } from '../components/index.js';
+
+import { navigationList, servicesList, socialNetworks } from '../dom/dom-selectors.js';
 
 export default function Layout() { }
 
@@ -14,5 +16,17 @@ Layout.prototype.init = function () {
         items: navigationItems,
         wrapperElement: navigationList,
         componentElement: NavigationItem
+    });
+
+    renderer.renderToUI({
+        items: serviceItems,
+        wrapperElement: servicesList,
+        componentElement: ServiceItem
+    });
+
+    renderer.renderToUI({
+        items: socialNetworkItem,
+        wrapperElement: socialNetworks,
+        componentElement: SocialNetworkItem
     });
 }

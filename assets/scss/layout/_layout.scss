@@ -1,8 +1,12 @@
 @use 'logo';
 @use 'header';
+@use 'footer';
 @use 'container';
 
 
 body {
-    background-color: #520b16;
+    // background-image: linear-gradient(to right,red, black);
+    // background-image: radial-gradient(circle at 50% 20%, #3b000773 0%, rgba(10, 10, 11, 1) 85%);
+    background-color: #17080a;
+    background-image: radial-gradient(circle at 49% 25%, rgba(178, 13, 35, .1) 0%, rgba(23, 8, 10, 1) 85%);
 }

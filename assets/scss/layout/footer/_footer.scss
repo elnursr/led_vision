@@ -1,0 +1,23 @@
+@use '../../abstracts' as v;
+
+.footer {
+    margin-top: 9em;
+    box-shadow: 0 0 5px 2.5px v.$color-primary;
+    background-color: v.$color-secondary;
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1em;
+        height: 12em;
+    }
+
+    &-brand {
+        &__decription {
+            padding: .9em 0;
+            color: v.$color-white;
+        }
+    }
+}
