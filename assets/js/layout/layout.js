@@ -1,10 +1,10 @@
 import { Renderer } from '../renderers/render.js'
 
-import { serviceItems, navigationItems, socialNetworkItem } from '../data/index.js';
+import { serviceItems, navigationItems, footerContactItems, socialNetworkItems } from '../data/index.js';
 
-import { ServiceItem, NavigationItem, SocialNetworkItem } from '../components/index.js';
+import { ServiceItem, NavigationItem, FooterNavigationItem, FooterContactItem, SocialNetworkItem } from '../components/index.js';
 
-import { navigationList, servicesList, socialNetworks } from '../dom/dom-selectors.js';
+import { serviceList, navigationList, footerNavigationList, footerContactList, socialNetwork } from '../dom/dom-selectors.js';
 
 export default function Layout() { }
 
@@ -19,14 +19,26 @@ Layout.prototype.init = function () {
     });
 
     renderer.renderToUI({
+        items: navigationItems,
+        wrapperElement: footerNavigationList,
+        componentElement: FooterNavigationItem
+    });
+
+    renderer.renderToUI({
+        items: footerContactItems,
+        wrapperElement: footerContactList,
+        componentElement: FooterContactItem
+    });
+
+    renderer.renderToUI({
         items: serviceItems,
-        wrapperElement: servicesList,
+        wrapperElement: serviceList,
         componentElement: ServiceItem
     });
 
     renderer.renderToUI({
-        items: socialNetworkItem,
-        wrapperElement: socialNetworks,
+        items: socialNetworkItems,
+        wrapperElement: socialNetwork,
         componentElement: SocialNetworkItem
     });
 }

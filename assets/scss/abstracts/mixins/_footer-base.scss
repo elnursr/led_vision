@@ -1,0 +1,25 @@
+@use '../variables' as v;
+
+@mixin footer-base() {
+    &__heading {
+        text-transform: uppercase;
+        color: v.$color-white;
+    }
+
+    &__list {
+        padding: .9em 0;
+    }
+
+    &__item {
+        padding: .35em 0;
+    }
+
+    &__link {
+        transition: color .3s;
+        color: v.$color-text;
+
+        &:hover {
+            color: v.$color-primary;
+        }
+    }
+}

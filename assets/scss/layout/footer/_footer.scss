@@ -1,23 +1,16 @@
 @use '../../abstracts' as v;
+@use '../../abstracts/mixins' as m;
 
 .footer {
-    margin-top: 9em;
-    box-shadow: 0 0 5px 2.5px v.$color-primary;
-    background-color: v.$color-secondary;
+    margin-top: 5.5em;
+    // box-shadow: 0 0 5px 2.5px v.$color-primary;
+    background-color: v.$color-bg;
 
 
     &__wrapper {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        gap: 1em;
-        height: 12em;
-    }
-
-    &-brand {
-        &__decription {
-            padding: .9em 0;
-            color: v.$color-white;
-        }
+        // gap: 1em;
+        padding: 3em 0 1.5em;
     }
 }

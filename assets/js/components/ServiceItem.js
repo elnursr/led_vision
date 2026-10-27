@@ -1,14 +1,14 @@
 export function ServiceItem({ icon, title, description, viewBox } = {}) {
     return (
         `
-            <li class="services__item">
-                <div class="services__icon">
+            <li class="service__item">
+                <div class="service__icon">
                     <svg viewBox="${viewBox}">
                         <use href="assets/media/svg/icons.svg#icon-${icon}"></use>
                     </svg>
                 </div>
-                <h2 class="services__title">${title}</h2>
-                <p class="services__description">${description}</p>
+                <h2 class="service__title">${title}</h2>
+                <p class="service__description">${description}</p>
             </li>       
         `
     )

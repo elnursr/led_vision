@@ -1,0 +1,11 @@
+@use '../../../abstracts' as v;
+@use '../../../abstracts/mixins' as m;
+
+.footer-navigation {
+
+    @include m.footer-base();
+
+    &__link {
+        text-transform: uppercase;
+    }
+}

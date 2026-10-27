@@ -1,6 +1,6 @@
 @use '../../abstracts' as v;
 
-.social-networks {
+.social-network {
     display: flex;
     gap: .5em;
 
@@ -19,6 +19,6 @@
     &__icon {
         width: 1.5em;
         height: 1.5em;
-        color: white;
+        color: v.$color-white;
     }
 }
