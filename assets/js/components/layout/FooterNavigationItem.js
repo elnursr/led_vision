@@ -1,4 +1,4 @@
-export function FooterNavigationItem({ url, title } = {}) {
+export function FooterNavigationItem({ item: { url, title } } = {}) {
     return (
         `
             <li class="footer-navigation__item">

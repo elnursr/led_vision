@@ -1,17 +1,22 @@
 export default [
     {
         'title': 'home',
-        'url': '#home',
+        'url': '#',
         'isActive': true
     },
     {
-        'title': 'led displays',
-        'url': '#led-displays',
+        'title': 'products',
+        'url': '#products',
         'isActive': false
     },
     {
-        'title': 'animations',
-        'url': '#animations',
+        'title': 'services',
+        'url': '#services',
+        'isActive': false
+    },
+    {
+        'title': 'our solutions',
+        'url': '#our-solutions',
         'isActive': false
     },
     {
@@ -20,13 +25,8 @@ export default [
         'isActive': false
     },
     {
-        'title': 'about',
-        'url': '#about',
-        'isActive': false
-    },
-    {
-        'title': 'contact-us',
-        'url': '#contact-us',
+        'title': 'faq',
+        'url': '#faq',
         'isActive': false
     }
 ];

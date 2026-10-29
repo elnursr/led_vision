@@ -2,15 +2,43 @@
 @use '../../abstracts/mixins' as m;
 
 .footer {
+
     margin-top: 5.5em;
-    // box-shadow: 0 0 5px 2.5px v.$color-primary;
-    background-color: v.$color-bg;
+    background-color: v.$color-black;
 
 
     &__wrapper {
         display: flex;
         justify-content: space-between;
-        // gap: 1em;
         padding: 3em 0 1.5em;
+    }
+
+    &-brand {
+        &__decription {
+            padding: .9em 0;
+            color: v.$color-text;
+        }
+    }
+
+    &-contact {
+        @include m.footer-base();
+
+        &__label {
+            text-transform: capitalize;
+            color: v.$color-text;
+        }
+    }
+
+    &-link {
+        @include m.footer-base();
+    }
+
+    &-navigation {
+
+        @include m.footer-base();
+
+        &__link {
+            text-transform: uppercase;
+        }
     }
 }

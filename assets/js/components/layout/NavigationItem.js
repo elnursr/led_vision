@@ -1,4 +1,4 @@
-export function NavigationItem({ title, url, isActive } = {}) {
+export function NavigationItem({ item: { title, url, isActive } } = {}) {
     let activeClass = isActive ? 'navigation-list__link--active' : null;
     return (
         `

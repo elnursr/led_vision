@@ -1,0 +1,87 @@
+@use '../../abstracts' as v;
+
+.our-solution {
+
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.3em 0;
+        color: v.$color-white;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.8em;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        width: 32%;
+        padding: 1.7em 1.8em;
+        transition: box-shadow .3s;
+        background-color: v.$bg-card;
+
+        &:hover {
+            box-shadow: 0 0 12px 2.5px inset v.$color-primary;
+        }
+    }
+
+    &-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .3em 0;
+
+        &__icon {
+            width: 2.3em;
+            height: 2.3em;
+            padding: .45em;
+            border-radius: v.$border-radius-base;
+            color: v.$color-primary;
+            background-color: rgba(v.$color-primary, .3);
+        }
+
+    }
+
+    &__rank {
+        color: v.$color-text;
+    }
+
+    &__content {
+        padding: 1em 0;
+    }
+
+    &__title {
+        font-size: 1.31em;
+        color: v.$color-white;
+    }
+
+    &__description {
+        padding: .7em 0 3.1em;
+        font-size: .9em;
+        line-height: 1.5em;
+        color: v.$color-text;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        color: v.$color-white;
+
+        &:hover {
+            .our-solution-link__icon {
+                margin-left: .3em;
+            }
+        }
+
+        &__icon {
+            display: flex;
+            width: 1.5em;
+            height: 1.5em;
+            transition: margin-left .3s;
+        }
+    }
+}

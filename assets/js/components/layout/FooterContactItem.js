@@ -1,4 +1,4 @@
-export function FooterContactItem({ url, label, value } = {}) {
+export function FooterContactItem({ item: { url, label, value } } = {}) {
     return (
         `
             <li class="footer-contact__item">

@@ -1,4 +1,4 @@
-export function SocialNetworkItem({ url, icon, viewBox } = {}) {
+export function SocialNetworkItem({ item: { url, icon, viewBox } } = {}) {
     return (
         `
             <li class="social-network__item">

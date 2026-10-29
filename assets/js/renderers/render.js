@@ -6,7 +6,7 @@ Renderer.prototype.renderToUI = function ({ items, wrapperElement, componentElem
     let renderHTML = '';
 
     for (let i = 0; i < items.length; i++) {
-        renderHTML += componentElement(items[i]);
+        renderHTML += componentElement({ item: items[i], index: i });
     }
 
     wrapperElement.innerHTML = renderHTML;

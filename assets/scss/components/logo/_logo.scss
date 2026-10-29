@@ -1,6 +1,7 @@
 @use '../../abstracts' as v;
 
 .brand-logo {
+
     &__link {
         display: block;
     }
@@ -8,7 +9,7 @@
     &__word {
         display: inline-block;
         text-transform: uppercase;
-        
+
     }
 
     &__word:first-child {

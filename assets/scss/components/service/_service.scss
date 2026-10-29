@@ -1,7 +1,8 @@
 @use '../../abstracts' as v;
 
 .service {
-    margin-top: 7em;
+
+    padding-top: 7em;
 
     &__heading {
         text-align: center;
@@ -26,9 +27,8 @@
         width: 19%;
         padding: 1em;
         transition: box-shadow .5s, transform .3s ease;
-        // backdrop-filter: blur(1.3em);
         border-radius: v.$border-radius-base;
-        background-color: v.$color-card;
+        background-color: v.$bg-card;
 
         &:hover {
             transform: translateY(-7%);

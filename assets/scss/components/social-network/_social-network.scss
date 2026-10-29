@@ -1,6 +1,7 @@
 @use '../../abstracts' as v;
 
 .social-network {
+    
     display: flex;
     gap: .5em;
 
@@ -9,7 +10,7 @@
         padding: .7em;
         border-radius: 50%;
         transition: box-shadow .5s;
-        background-color: #111112;
+        background-color: v.$bg-social;
 
         &:hover {
             box-shadow: 0 0 15px 2.5px inset v.$color-primary;

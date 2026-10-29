@@ -1,4 +1,4 @@
-export function ServiceItem({ icon, title, description, viewBox } = {}) {
+export function ServiceItem({ item: { icon, title, description, viewBox } } = {}) {
     return (
         `
             <li class="service__item">
