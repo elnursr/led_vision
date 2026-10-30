@@ -1,3 +1,4 @@
+@use '../../utilities' as u;
 @use '../../abstracts' as v;
 
 .our-solution {
@@ -24,18 +25,22 @@
         transition: box-shadow .3s;
         background-color: v.$bg-card;
 
+        @include u.mobile-md {
+            width: 100%
+        }
+
         &:hover {
             box-shadow: 0 0 12px 2.5px inset v.$color-primary;
         }
     }
 
-    &-meta {
+    &__meta {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: .3em 0;
 
-        &__icon {
+        &-icon {
             width: 2.3em;
             height: 2.3em;
             padding: .45em;
@@ -66,18 +71,18 @@
         color: v.$color-text;
     }
 
-    &-link {
+    &__link {
         display: flex;
         align-items: center;
         color: v.$color-white;
 
         &:hover {
-            .our-solution-link__icon {
+            .our-solution__link-icon {
                 margin-left: .3em;
             }
         }
 
-        &__icon {
+        &-icon {
             display: flex;
             width: 1.5em;
             height: 1.5em;

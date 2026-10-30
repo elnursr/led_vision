@@ -2,8 +2,8 @@ export function OurSolutionItem({ item: { icon, viewBox, title, description }, i
     return (
         `
             <li class="our-solution__item">
-                <div class="our-solution-meta">
-                    <div class="our-solution-meta__icon">
+                <div class="our-solution__meta">
+                    <div class="our-solution__meta-icon">
                         <svg viewBox="${viewBox}">
                             <use href="assets/media/svg/icons.svg#icon-${icon}"></use>
                         </svg>
@@ -14,9 +14,9 @@ export function OurSolutionItem({ item: { icon, viewBox, title, description }, i
                     <h1 class="our-solution__title">${title}</h1>
                     <p class="our-solution__description">${description}</p>
                 </div>
-                <a href="" class="our-solution-link">
+                <a href="" class="our-solution__link">
                     Read More
-                    <div class="our-solution-link__icon">
+                    <div class="our-solution__link-icon">
                         <svg viewBox="0 0 24 24">
                             <use href="assets/media/svg/icons.svg#icon-arrow-right"></use>
                         </svg>

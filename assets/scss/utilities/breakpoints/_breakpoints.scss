@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+@use '../../abstracts' as v;
+
+@mixin mobile-sm {
+    @media (width <=v.$sm) {
+        @content;
+    }
+}
+
+@mixin mobile-md {
+    @media (v.$sm < width <=v.$md) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (v.$md < width <=v.$l) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (v.$l < width <=v.$tablet) {
+        @content;
+    }
+}
+
+@mixin breakpoint-up() {}

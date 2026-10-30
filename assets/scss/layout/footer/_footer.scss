@@ -1,3 +1,4 @@
+@use '../../utilities' as u;
 @use '../../abstracts' as v;
 @use '../../abstracts/mixins' as m;
 
@@ -11,6 +12,11 @@
         display: flex;
         justify-content: space-between;
         padding: 3em 0 1.5em;
+
+        @include u.mobile-sm {
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &-brand {

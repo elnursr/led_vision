@@ -1,3 +1,4 @@
+@use '../../utilities' as u;
 @use '../../abstracts' as v;
 
 .service {
@@ -29,6 +30,14 @@
         transition: box-shadow .5s, transform .3s ease;
         border-radius: v.$border-radius-base;
         background-color: v.$bg-card;
+
+        @include u.mobile-sm {
+            width: 100%
+        }
+
+        @include u.mobile-md {
+            width: 100%
+        }
 
         &:hover {
             transform: translateY(-7%);

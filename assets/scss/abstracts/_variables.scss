@@ -1,13 +1,12 @@
 $color-primary: #b20d23;
 $color-secondary: #17080a;
-$color-thirdy: #520b16;
-$color-card: rgb(21, 13, 18);
 
 $color-text: #8e8e8e;
 
 $color-black: rgb(0, 0, 0);
 $color-white: rgb(255, 255, 255);
 
+// background
 $bg-social: rgba($color-white, .1);
 $bg-card: rgba($color-black, .45);
 
@@ -20,3 +19,11 @@ $border-radius-base: .3rem;
 // selection
 $color-selection: $color-white;
 $bg-color-selection: $color-black;
+
+// breakpoints
+$sm: 20em;
+$md: 23.4375em;
+$l: 26.5625em;
+$tablet: 48em;
+$laptop: 64em;
+$laptop-l: 90em;
