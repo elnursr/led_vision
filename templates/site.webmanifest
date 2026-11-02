@@ -1,0 +1,30 @@
+{
+    "name": "{{NAME}} | ",
+    "scope": "{{DOMAIN}}/",
+    "short_name": "{{SHORT_NAME}}",
+    "icons": [
+        {
+            "sizes": "16x16",
+            "type": "image/{{IMAGE_EXTENSION_TYPE}}",
+            "src": "{{DOMAIN}}/assets/media/{{IMAGE_EXTENSION_TYPE}}/logo/{{FILE_NAME}}_16_x_16.{{IMAGE_EXTENSION_TYPE}}"
+        },
+        {
+            "sizes": "32x32",
+            "type": "image/{{IMAGE_EXTENSION_TYPE}}",
+            "src": "{{DOMAIN}}/assets/media/{{IMAGE_EXTENSION_TYPE}}/logo/{{FILE_NAME}}_32_x_32.{{IMAGE_EXTENSION_TYPE}}"
+        },
+        {
+            "sizes": "48x48",
+            "type": "image/{{IMAGE_EXTENSION_TYPE}}",
+            "src": "{{DOMAIN}}/assets/media/{{IMAGE_EXTENSION_TYPE}}/logo/{{FILE_NAME}}_48_x_48.{{IMAGE_EXTENSION_TYPE}}"
+        },
+        {
+            "sizes": "192x192",
+            "type": "image/{{IMAGE_EXTENSION_TYPE}}",
+            "src": "{{DOMAIN}}/assets/media/{{IMAGE_EXTENSION_TYPE}}/logo/{{FILE_NAME}}_192_x_192.{{IMAGE_EXTENSION_TYPE}}"
+        }
+    ],
+    "display": "standalone",
+    "theme-color": "#b20d23",
+    "background-color": "#000000"
+}
