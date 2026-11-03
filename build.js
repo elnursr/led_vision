@@ -5,17 +5,11 @@
 const fs = require('fs');
 const path = require('path');
 const CONFIG = require('./config/site.config.js');
-const { config } = require('process');
 
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 const ASSETS = path.join(ROOT, 'assets');
 const TEMPLATES = path.join(ROOT, 'templates');
-
-fs.copyFileSync(
-    path.join(ROOT, 'index.html'),
-    path.join(DIST, 'index.html')
-);
 
 fs.cpSync(
     ASSETS,
@@ -24,9 +18,40 @@ fs.cpSync(
 );
 
 generateFile({
+    isRoot: false,
+    fileName: 'robots',
+    extensionType: 'txt',
+    siteConfig: {
+        '{{DOMAIN}}': CONFIG.domain,
+    }
+});
+
+generateFile({
+    isRoot: false,
+    fileName: 'sitemap',
+    extensionType: 'xml',
+    siteConfig: {
+        '{{DOMAIN}}': CONFIG.domain,
+    }
+});
+
+generateFile({
+    isRoot: true,
+    fileName: 'index',
+    extensionType: 'html',
+    siteConfig: {
+        '{{NAME}}': CONFIG.name,
+        '{{DOMAIN}}': CONFIG.domain,
+        '{{FILE_NAME}}': CONFIG.file_name,
+        '{{IMAGE_EXTENSION_TYPE}}': CONFIG.image_extension_type
+    }
+});
+
+generateFile({
+    isRoot: false,
     fileName: 'site',
     extensionType: 'webmanifest',
-    config: {
+    siteConfig: {
         '{{NAME}}': CONFIG.name,
         '{{DOMAIN}}': CONFIG.domain,
         '{{FILE_NAME}}': CONFIG.file_name,
@@ -35,28 +60,12 @@ generateFile({
     }
 });
 
-generateFile({
-    fileName: 'robots',
-    extensionType: 'txt',
-    config: {
-        '{{DOMAIN}}': CONFIG.domain,
-    }
-});
+function generateFile({ isRoot, fileName, extensionType, siteConfig }) {
 
-generateFile({
-    fileName: 'sitemap',
-    extensionType: 'xml',
-    config: {
-        '{{DOMAIN}}': CONFIG.domain,
-    }
-});
-
-function generateFile({ fileName, extensionType, config }) {
-
-    const entries = Object.entries(config);
+    const entries = Object.entries(siteConfig);
 
     const file = fs.readFileSync(
-        path.join(TEMPLATES, `${fileName}.${extensionType}`),
+        path.join(isRoot ? ROOT : TEMPLATES, `${fileName}.${extensionType}`),
         'utf-8'
     );
 

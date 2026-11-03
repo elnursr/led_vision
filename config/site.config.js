@@ -1,5 +1,5 @@
 const CONFIG = {
-    name: 'Led Vision',
+    name: 'Led-Vision',
     short_name: 'LV',
     file_name: 'led_vision',
     image_extension_type: 'png',
