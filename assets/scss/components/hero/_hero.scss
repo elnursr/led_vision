@@ -1,0 +1,15 @@
+.hero {
+    // position: fixed;
+    // padding-top: 5em;
+    // height: 65vh;
+    // z-index: -1;
+
+    &::before {
+        // content: '';
+        // position: absolute;
+        // inset: 0;
+        // width: 100%;
+        // height: 100%;
+        // background-image: radial-gradient(circle at 49% 25%, rgba(178, 13, 35, .1) 0%, rgba(23, 8, 10, 1) 85%);
+    }
+}

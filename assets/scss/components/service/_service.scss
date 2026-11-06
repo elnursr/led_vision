@@ -16,7 +16,8 @@
     &__list {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
+        // flex-shrink: 0;
         gap: 1em;
     }
 
