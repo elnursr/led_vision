@@ -2,28 +2,39 @@
 
 @use '../../abstracts' as v;
 
-@mixin mobile-sm {
-    @media (width <=v.$sm) {
+@mixin breakpoint($isUp, $device, $size) {
+    $breakpoint-map: map-get((mobile:v.$mobile,
+                tablet:v.$tablet,
+                laptop:v.$laptop,
+                desktop:v.$desktop), $device);
+
+    @if($isUp) {
+        @media (width >=map-get($breakpoint-map, $size)) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (width <=map-get($breakpoint-map, $size)) {
+            @content;
+        }
+    }
+}
+
+@mixin breakpoint-mobile($size) {
+    @media(width < map-get(v.$tablet, $size)) {
         @content;
     }
 }
 
-@mixin mobile-md {
-    @media (v.$sm < width <=v.$md) {
+@mixin breakpoint-tablet($size) {
+    @media(map-get(v.$tablet, $size) <= width < map-get(v.$laptop, $size)) {
         @content;
     }
 }
 
-@mixin mobile-l {
-    @media (v.$md < width <=v.$l) {
+@mixin breakpoint-between($minRange, $maxRange) {
+    @media (map-get(v.$mobile, $minRange) < width <=map-get(v.$tablet, $maxRange)) {
         @content;
     }
 }
-
-@mixin tablet {
-    @media (v.$l < width <=v.$tablet) {
-        @content;
-    }
-}
-
-@mixin breakpoint-up() {}

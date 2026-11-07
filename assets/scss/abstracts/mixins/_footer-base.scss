@@ -1,9 +1,20 @@
+@use '../utilities' as u;
 @use '../variables' as v;
+
 
 @mixin footer-base() {
     &__heading {
+
         text-transform: uppercase;
         color: v.$color-white;
+
+        @include u.breakpoint-mobile(m) {
+            text-align: center;
+        }
+
+        @include u.breakpoint-tablet(m) {
+           font-size: 1.1em;
+        }
     }
 
     &__list {

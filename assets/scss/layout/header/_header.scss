@@ -22,7 +22,7 @@
         align-items: center;
         gap: 1em;
 
-        @include u.mobile-sm {
+        @include u.breakpoint-mobile(m) {
             display: none;
         }
 
@@ -32,6 +32,10 @@
             padding: 1em;
             transition: color .3s;
             color: v.$color-white;
+
+            @include u.breakpoint-tablet(m){
+                font-size: .5em;
+            }
 
             &::after,
             &::before {

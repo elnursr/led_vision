@@ -21,9 +21,28 @@ $color-selection: $color-white;
 $bg-color-selection: $color-black;
 
 // breakpoints
-// $sm: 20em;
-// $md: 23.4375em;
-// $l: 26.5625em;
-// $tablet: 48em;
-// $laptop: 64em;
-// $laptop-l: 90em;
+
+// 320px, 375px, 425px
+$mobile: (
+    's':20em,
+    'm':23.4375em,
+    'l':26.5625em
+);
+
+// 768px, 992px
+$tablet: (
+    'm':48em,
+    'l':62em //l or landscape
+);
+
+// 1024px, 1200px
+$laptop: (
+    's':64em,
+    'm':75em
+);
+
+// 1366px, 1440px
+$desktop: (
+    's':85.375em,
+    'm':90em
+);

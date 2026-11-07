@@ -16,9 +16,15 @@
     &__list {
         display: flex;
         justify-content: center;
-        // flex-wrap: wrap;
-        // flex-shrink: 0;
         gap: 1em;
+
+        @include u.breakpoint-mobile(m) {
+            flex-wrap: wrap;
+        }
+
+        @include u.breakpoint-tablet(m) {
+            flex-wrap: wrap
+        }
     }
 
     &__item {
@@ -32,12 +38,12 @@
         border-radius: v.$border-radius-base;
         background-color: v.$bg-card;
 
-        @include u.mobile-sm {
-            width: 100%
+        @include u.breakpoint-mobile(m) {
+            width: 100%;
         }
 
-        @include u.mobile-md {
-            width: 100%
+        @include u.breakpoint-tablet(m) {
+            width: 47%;
         }
 
         &:hover {

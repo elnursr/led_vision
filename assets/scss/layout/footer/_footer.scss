@@ -13,13 +13,25 @@
         justify-content: space-between;
         padding: 3em 0 1.5em;
 
-        @include u.mobile-sm {
-            width: 100%;
-            justify-content: center;
+        @include u.breakpoint-mobile(m) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include u.breakpoint-tablet(m) {
+            gap: 1.5em;
         }
     }
 
     &-brand {
+
+        @include u.breakpoint-mobile(m) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 1.3em;
+        }
+
         &__decription {
             padding: .9em 0;
             color: v.$color-text;
@@ -43,8 +55,22 @@
 
         @include m.footer-base();
 
+        &__list {
+
+            @include u.breakpoint-mobile(m) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: .5em;
+            }
+        }
+
         &__link {
             text-transform: uppercase;
+
+            @include u.breakpoint-mobile(m) {
+               text-transform: capitalize;
+            }
         }
     }
 }
