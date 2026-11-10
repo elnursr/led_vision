@@ -22,7 +22,7 @@
         align-items: center;
         gap: 1em;
 
-        @include u.breakpoint-mobile(m) {
+        @include u.breakpoint-mobile() {
             display: none;
         }
 
@@ -33,8 +33,14 @@
             transition: color .3s;
             color: v.$color-white;
 
-            @include u.breakpoint-tablet(m){
+            // tablet
+            @include u.breakpoint-between(v.$tablet, m, v.$laptop, s) {
                 font-size: .5em;
+            }
+
+            // laptop
+            @include u.breakpoint-between(v.$laptop, s, v.$laptop, xl) {
+                font-size: .8em;
             }
 
             &::after,
@@ -77,6 +83,48 @@
                     height: 100%;
                 }
             }
+        }
+    }
+
+    &-menu {
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+        z-index: 7;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: .41em;
+        padding: .5em;
+
+        &__item {
+            width: 2.5em;
+            height: .21em;
+            background-color: v.$color-primary;
+            transition: transform .3s;
+        }
+
+        &--active {
+            .navigation-menu__item:first-child {
+                transform: translateY(.5em) rotate(45deg);
+            }
+
+            .navigation-menu__item:nth-child(2) {
+                transform: scale(0);
+            }
+
+            .navigation-menu__item:last-child {
+                transform: translateY(-.75em) rotate(-45deg);
+            }
+        }
+
+        @include u.breakpoint-mobile() {
+            display: flex;
+        }
+
+        @include u.breakpoint-between(v.$tablet, m, v.$laptop, m) {
+            display: none;
         }
     }
 }

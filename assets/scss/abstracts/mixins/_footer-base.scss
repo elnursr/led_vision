@@ -3,17 +3,18 @@
 
 
 @mixin footer-base() {
-    &__heading {
 
+    &__heading {
         text-transform: uppercase;
         color: v.$color-white;
 
-        @include u.breakpoint-mobile(m) {
+        @include u.breakpoint-mobile() {
             text-align: center;
+            font-size: 1.5em;
         }
 
-        @include u.breakpoint-tablet(m) {
-           font-size: 1.1em;
+        @include u.breakpoint-between(v.$tablet, m, v.$laptop, m) {
+            font-size: 1.1em;
         }
     }
 
@@ -31,6 +32,10 @@
 
         &:hover {
             color: v.$color-primary;
+        }
+
+        @include u.breakpoint-between(v.$tablet, m, v.$laptop, m) {
+            font-size: .9em;
         }
     }
 }

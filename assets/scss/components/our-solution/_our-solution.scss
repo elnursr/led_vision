@@ -20,21 +20,23 @@
     &__item {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 32%;
         padding: 1.7em 1.8em;
         transition: box-shadow .3s;
         background-color: v.$bg-card;
 
+        &:hover {
+            box-shadow: 0 0 12px 2.5px inset v.$color-primary;
+        }
+
         @include u.breakpoint-mobile(m) {
             width: 100%;
         }
 
-        @include u.breakpoint-tablet(m) {
+        // tablet & laptop l
+        @include u.breakpoint-between(v.$tablet, m, v.$laptop, xl) {
             width: 47%;
-        }
-
-        &:hover {
-            box-shadow: 0 0 12px 2.5px inset v.$color-primary;
         }
     }
 
@@ -52,7 +54,6 @@
             color: v.$color-primary;
             background-color: rgba(v.$color-primary, .3);
         }
-
     }
 
     &__rank {
@@ -60,19 +61,39 @@
     }
 
     &__content {
-        padding: 1em 0;
+        padding: .8em 0;
     }
 
     &__title {
         font-size: 1.31em;
         color: v.$color-white;
+
+        @include u.breakpoint-mobile(m) {
+            font-size: 1.15em;
+            line-height: 1.2em;
+        }
+
+        // mobile & tablet & laptop l
+        @include u.breakpoint-between(v.$mobile, s, v.$laptop, xl) {
+            // text-align: center;
+        }
     }
 
     &__description {
         padding: .7em 0 3.1em;
         font-size: .9em;
         line-height: 1.5em;
+        text-wrap: balance;
         color: v.$color-text;
+
+        @include u.breakpoint-mobile() {
+            padding: .7em 0;
+        }
+
+        // tablet & laptop l
+        @include u.breakpoint-between(v.$tablet, m, v.$laptop, xl) {
+            padding: .7em 0;
+        }
     }
 
     &__link {

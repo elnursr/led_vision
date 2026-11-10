@@ -35,14 +35,10 @@ $tablet: (
     'l':62em //l or landscape
 );
 
-// 1024px, 1200px
+// 1024px, 1200px, 1366px, 1440px
 $laptop: (
     's':64em,
-    'm':75em
-);
-
-// 1366px, 1440px
-$desktop: (
-    's':85.375em,
-    'm':90em
+    'm':75em,
+    'l':85.375em,
+    'xl':90em
 );

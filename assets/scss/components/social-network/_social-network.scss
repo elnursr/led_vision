@@ -1,7 +1,8 @@
+@use '../../utilities' as u;
 @use '../../abstracts' as v;
 
 .social-network {
-    
+
     display: flex;
     gap: .5em;
 
@@ -21,5 +22,10 @@
         width: 1.5em;
         height: 1.5em;
         color: v.$color-white;
+
+        @include u.breakpoint-mobile() {
+            width: 1.2em;
+            height: 1.2em;
+        }
     }
 }
